@@ -14,9 +14,9 @@ Detect Sleep:  Estimates putative quiet wakefulness/sleep states given:
 
 Matlab toolboxes:
 
-Curve Fitting Toolbox  
-Mapping Toolbox
-Wavelet Toolbox 
-Signal Processing Toolbox
-Statistics Toolbox
-Parallel Computing Toolbox
+Curve Fitting,  
+Mapping,
+Wavelet,
+Signal Processing,
+Statistics,
+Parallel Computing
