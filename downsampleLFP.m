@@ -18,6 +18,7 @@ tot = length(RawLFP);
 % first reshape the LFP vector into a matrix
 if rem(tot, 2) == 0 % make even if not
 else
+    LastSample = RawLFP(end);
     RawLFP = RawLFP(1:end-1);  % drop last sample
 end
 
@@ -48,7 +49,11 @@ if tot > 20000
     %
     % figure; plot(ts,RawLFP,'k');
     % hold on; plot(ts2,downsampledLFP,'r');
-    
+    if rem(tot, 2) == 0 % make even if not
+    else
+        downsampledLFP = [downsampledLFP,LastSample]; % keep the same number of samples as the original       
+    end
+     
     %% save to current directory
     directorio = pwd;
     
@@ -62,7 +67,7 @@ if tot > 20000
     
     dirsave = strcat([directorio, '\LFP_Downsampled' name '_' num2str(NewSR) 'Hz']);
     save(dirsave, 'downsampledLFP');
-        
+    
 else
     warndlg('Does not run for LFPs shorter than 20000 samples');
 end
