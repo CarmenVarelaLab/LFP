@@ -11,7 +11,7 @@ else
 end
 
 RawLFP = double(RawLFP);
-RawLFP = reshape(RawLFP,1,length(RawLFP)); % make sure vector is horizontal
+RawLFP = reshape(RawLFP,1,length(RawLFP)); %  row vector  
 tot = length(RawLFP);
 
 % To avoid running out of memory issues will work with chunks:
