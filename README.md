@@ -1,6 +1,6 @@
 # LFP
 
-Group of matlab Functions for LFP analysis.
+Group of Matlab functions and scripts for LFP analysis.
 
 General guidelines:  
 
